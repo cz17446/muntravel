@@ -1,0 +1,106 @@
+
+h1 {
+    text-align: left;
+    color: black;
+}
+
+h2 {
+    text-align: left;
+    color: black;
+}
+
+img {
+    width: 200px;
+}
+
+#content {
+    width: 320px;
+    margin: 10px;
+}
+
+/*********** title *************/
+#heading {
+    width: 400px;
+    display: table;
+
+    border: thick groove black;
+    width: 400px;
+}
+
+#logoImage {
+    width: 100px;
+}
+
+#headingRow {
+    display: table-row;
+}
+
+#logo {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#address {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#addressContent {
+    margin: 10px;
+}
+
+/*********** itinerary list *************/
+#mainpage {
+    display: table;
+
+    width: 320px;
+    border: thin groove black;
+    text-align: center;
+}
+
+.location {
+    border: thin solid black;
+    background-color: darkgrey;
+
+    width: 320px;
+    padding: 20px;
+    margin: 20px;
+    border-spacing: 15px;
+}
+
+/*********** weekly offers *************/
+#offers {
+    border: thin groove black;
+    border-radius:2em;
+    width: 340px;
+
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+/*********** footer *************/
+#contact {
+    border: thin groove black;
+    width: 362px;
+
+    padding: 20px;
+    margin: 20px, 20px, 20px, 10px;
+    text-align: center;
+}
+
+body {
+    background-color: #f2a21e;
+    font-family: Georgia;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    padding-top: 10px;
+}

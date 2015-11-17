@@ -1,0 +1,121 @@
+h1 {
+    text-align: left;
+    color: black;
+}
+
+h2{
+    text-align: left;
+    color: black;
+}
+
+#content {
+    width: 320px;
+    margin: 10px;
+}
+
+/****** title ********/
+#tripTitle {
+    display: table;
+    border-spacing: 10px;
+
+    border: thick groove black;
+    width: 400px;
+    padding: 10px, 20px, 10px, 20px;
+    margin: 10px, 10px;
+}
+
+#titleRow {
+    display: table-row;
+}
+
+#titleName {
+    display: table-cell;
+    vertical-align: middle;
+    width: 240px;
+}
+
+#titleImageContainer {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/****** availableDates ********/
+#availableDates {
+    border: thin groove black;
+    border-radius:2em;
+    width: 380px;
+
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/****** Summary ********/
+#tripDetails {
+    width: 400px;
+}
+
+#tripSummary {
+    border: thin solid black;
+    background-color: darkgrey;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#program {
+    border: thin solid black;
+    background-color: darkgrey;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/****** services ********/
+#services {
+    display: table;
+
+    border-spacing: 5px;
+    width: 400px;
+    text-align: left;
+    clear: both;
+}
+
+#servicesRow {
+    display: table-row;
+}
+
+#servicesIncluded {
+    display: table-cell;
+    padding: 10px;
+    border: thin solid black;
+    background-color: darkgrey;
+}
+
+#servicesExcluded {
+    display: table-cell;
+    padding: 10px;
+    border: thin solid black;
+    background-color: darkgrey;
+}
+
+/****** reviews ********/
+#reviews {
+    border: thin solid black;
+    background-color: darkgrey;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 380px;
+
+    text-align: center;
+}
+
+body {
+    background-color: #f2a21e;
+    font-family: Georgia;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    padding-top: 10px;
+}

@@ -1,0 +1,122 @@
+
+h1 {
+    text-align: left;
+    color: blue;
+}
+
+h2 {
+    text-align: left;
+    color: blue;
+}
+
+#content {
+    width: 1000px;
+}
+
+/*********** title *************/
+#heading {
+    width: 1000px;
+
+    display: table;
+    /*border-spacing: 10px;*/
+
+    border: thick groove blue;
+    width: 990px;
+    padding: 10px, 20px, 10px, 20px;
+    margin: 10px, 10px;
+}
+
+#headingRow {
+    display: table-row;
+}
+
+#logo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+}
+
+#logoImage {
+    width: 200px;
+}
+
+#title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#address {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#addressContent {
+    margin: 10px;
+}
+
+/*********** itinerary list *************/
+#mainpage {
+    width: 700px;
+    border: thin groove blue;
+    text-align: center;
+    margin: 10px;;
+}
+
+.location {
+    display: table;
+    border: thin solid blue;
+    background-color: palegreen;
+
+    width: 600px;
+    padding: 20px;
+    margin: 20px;
+    border-spacing: 15px;
+}
+
+.locationHeader {
+    display: table-row;
+}
+
+.locationImage {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.locationTitle {
+    display: table-cell;
+    text-align: left;
+    width: 300px;
+}
+
+/*********** weekly offers *************/
+#offers {
+    border: thin groove blue;
+    border-radius:2em;
+    width: 200px;
+    float: right;
+
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+/*********** footer *************/
+#contact {
+    border: thin groove blue;
+    margin: 10px;
+    text-align: center;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+body {
+    background-color: #f2f294;
+    font-family: Georgia;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    padding-top: 50px;
+    margin: 0 0 0 100px;
+}

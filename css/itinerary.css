@@ -1,0 +1,167 @@
+h1 {
+    text-align: left;
+    color: blue;
+}
+
+h2{
+    text-align: left;
+    color: blue;
+}
+
+#content {
+    width: 1000px;
+}
+
+/****** title ********/
+#tripTitle {
+    display: table;
+    border-spacing: 10px;
+
+    border: thick groove blue;
+    width: 990px;
+    padding: 10px, 20px, 10px, 20px;
+    margin: 10px, 10px;
+}
+
+#titleRow {
+    display: table-row;
+}
+
+#titleName {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#titleImageContainer {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/****** availableDates ********/
+#availableDates {
+    border: thin groove blue;
+    border-radius:2em;
+    width: 200px;
+    float: left;
+
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+/****** Summary ********/
+#tripDetails {
+    float: right;
+    width: 600px;
+}
+
+#tripSummary {
+    border: thin solid blue;
+    background-color: palegreen;
+    padding: 20px;
+    margin: 20px;
+}
+
+#program {
+    border: thin solid blue;
+    background-color: palegreen;
+    padding: 20px;
+    margin: 20px;
+}
+
+/****** services ********/
+#services {
+    display: table;
+
+    border-spacing: 10px;
+    width: 970px;
+    padding: 20px;
+    text-align: left;
+    clear: both;
+}
+
+#servicesRow {
+    display: table-row;
+}
+
+#servicesIncluded {
+    display: table-cell;
+    padding: 20px;
+    margin: 20px;
+    border: thin solid blue;
+    background-color: palegreen;
+}
+
+#servicesExcluded {
+    display: table-cell;
+    padding: 20px;
+    margin: 20px;
+    border: thin solid blue;
+    background-color: palegreen;
+}
+
+/****** reviews ********/
+#reviews {
+    border: thin solid blue;
+    background-color: palegreen;
+    padding: 20px;
+    margin: 20px;
+}
+
+#newReviewBlock {
+    background-color: palegreen;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+#reviewsBlock {
+    border: thin solid blue;
+    background-color: #B0B0B0;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+#deletedReviewsBlock {
+    border: thin solid blue;
+    background-color: #B0B0B0;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.googleMap {
+    width: 250px;
+    height: 250px;
+}
+
+.review {
+    text-align: left;
+}
+
+.replyComment {
+    border: thin solid blue;
+    background-color: #dfa2f2;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+
+.reviewComment {
+    border: thin solid blue;
+    background-color: #f2f04f;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+
+body {
+    background-color: #f2f294;
+    font-family: Georgia;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    padding-top: 50px;
+    margin: 0 0 0 100px;
+}

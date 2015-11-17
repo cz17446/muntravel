@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/itinerary.css" media="screen and (min-device-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="css/itinerary-mobile.css" media="screen and (max-device-width: 640px)">
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="script/location_map.js"></script>
+    <script src="script/reviewslist_store.js"></script>
+    <script src="script/reviews_common.js"></script>
+    <script src="script/reviews_newyork.js"></script>
+    <meta charset="utf-8">
+    <title>New York</title>
+</head>
+<body>
+<div id="content">
+    <!-- Top Section -->
+    <div id="tripTitle">
+        <div id="titleRow">
+            <div id="titleName">
+                <h1>New York 3 Days Trip</h1>
+            </div>
+
+            <div class="titleImgContainer">
+                <img src="images/ny1.jpg" class="title_img">
+                <img src="images/ny2.jpg" class="title_img">
+                <img src="images/ny3.jpg" class="title_img">
+            </div>
+        </div>
+    </div>
+    <!-- Middle Section -->
+    <div id="availableDates">
+        <h2>Available Dates</h2>
+        <ul>
+            <li>October 15 - 17, 2015</li>
+            <li>October 19 - 21, 2015</li>
+            <li>November 1 - 3, 2015</li>
+            <li>November 5 - 7, 2015</li>
+            <li>November 9 - 11, 2015</li>
+            <li>November 16 - 18, 2015</li>
+            <li>November 22 - 24, 2015</li>
+        </ul>
+    </div>
+    <div id="tripDescription">
+        <div id="tripDetails">
+            <div id="tripSummary">
+                <h2>Trip Summary</h2>
+
+                <p>New York City is very popular city and most
+                    stylish tourist destination in the United States. The New York City is
+                    the city of many names including “The Big Apple”, “The City That Never
+                    Sleeps”, and “Gotham City”. The New York City is the richest city in
+                    America; NYC has inspired lots of classic songs e.g. “New York, New
+                    York” by Frank Sinatra and "Empire State of Mind" by Jay-Z. Many
+                    celebrities live in New York City and lots of TV Shows and movies filmed
+                    on location New York City. Also, Broadway theatres in Manhattan attract
+                    some of the most high-profile actors from Hollywood. The New York City
+                    announced that it has been approved for its own geographic top-level
+                    domain (.nyc) which will allow New Yorkers and visitors to easily find
+                    traveling information and other information online.</p>
+                <br>
+            </div>
+
+            <div id="program">
+                <h2>Program</h2>
+                <ul>
+                    <li>Day 1:</li>
+                    <ul>
+                        <li>Central Park</li>
+                        <li>The Metropolitan Museum of Art</li>
+                        <li>Top of the Rock Observation Deck</li>
+                    </ul>
+                    <li>Day 2:</li>
+                    <ul>
+                        <li>The National 9/11 Memorial & Museum</li>
+                        <li>Manhattan Skyline</li>
+                        <li>Broadway</li>
+                    </ul>
+                    <li>Day 3:</li>
+                    <ul>
+                        <li>Grand Central Terminal</li>
+                        <li>Radio City Music Hall</li>
+                        <li>The Cloisters</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div id="services">
+        <div id="servicesRow">
+            <div id="servicesIncluded">
+                <h2>Services Included</h2>
+                <ul>
+                    <li>Flight</li>
+                    <li>Hotel</li>
+                    <li>Breakfast</li>
+                </ul>
+            </div>
+            <div id="servicesExcluded">
+                <h2>Services Excluded</h2>
+                <ul>
+                    <li>Food</li>
+                    <li>Tips</li>
+                    <li>Drinks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="reviews">
+        <form>
+            <h2>User Reviews</h2>
+            <div id="reviewsBlock">
+
+            </div>
+            <h2>Archived Reviews</h2>
+            <div id="deletedReviewsBlock">
+
+            </div>
+            <div id="newReviewBlock">
+                <!-- New Comment Block -->
+                <fieldset>
+                    <legend>Please Leave Your Comment:</legend>
+                    <select id="userRoleInput">
+                        <option value="traveler">Traveler</option>
+                        <option value="hotelManager">Hotel Manager</option>
+                    </select>
+                    <input type="text" id="userNameInput" value="Your Name">
+                    </br>
+                    <textarea rows="4" cols="50" id="commentInput" placeholder="Comment"></textarea>
+                    </br>
+                    <input type="button" id="addButton" value="Add">
+                    <input type="button" id="clearStorageButton" value="Clean Storage">
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
