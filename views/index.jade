@@ -1,0 +1,109 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/mainpage.css', media='screen and (min-device-width: 641px)')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/mainpage-mobile.css', media='screen and (max-device-width: 640px)')
+    meta(charset='utf-8')
+    script.
+      window.onload = function() {
+      var clearButton = document.getElementById("masterStorageClear");
+      clearButton.onclick = function(){
+      console.log("Master Store Clear");
+      localStorage.clear();
+      }
+      }
+    title MUN Travel
+  body
+    #content
+      #heading
+        #headingRow
+          #logo
+            img#logoImage(src='/images/logo.png')
+          #title
+            h1
+              | Welcome to
+              br
+              |  MUN Travel
+          #address
+            p#addressContent
+              | 123 Prince Phillip Dr.
+              br
+              | St. John's, NL
+              br
+              |                     A1B 3S7
+              br
+              | (123) 456 - 7890
+            input#masterStorageClear(type='button', value='Clear Local Storage')
+      #offers
+        h2 Weekly Offers
+        h3 Trip 1
+        h4 CN Tower
+        |         10.07.2015 - 10.17.2015
+        h3 Trip 2
+        h4 Space Needle - 3-day getaway!
+        |         10.22.2015 - 10.25.2015
+        h3 Trip 3
+        h4 Red Rock Canyon
+        |         11.02.2015 - 11.12.2015
+        h3 Trip 4
+        h4 Times Square - Christmas Time!
+        |         12.23.2015 - 12.30.2015
+        |         *Insert Date*
+      #mainpage
+        #itinerary
+          #lasvegas.location
+            .locationHeader
+              .locationImage
+                a(href='lasvegas')
+                  img(src='/images/mainpage/thestrip.jpg')
+              .locationTitle
+                h2 Las Vegas
+                p
+                  | Las Vegas, an ever-changing fantasy-land of a city,
+                  | has seen unbelievable expansion since it emerged from
+                  | the desert just over 100 years ago.
+                  | You will be dazzled by Vegas, but the sheer number of things
+                  | to see and do can seem overwhelming. A little advance planning
+                  | will help you to enjoy your Vegas trip.
+          #seattle.location
+            .locationHeader
+              .locationImage
+                a(href='seattle')
+                  img(src='/images/mainpage/spaceneedle.jpg')
+              .locationTitle
+                h2 Seattle
+                p
+                  | Seattle is America's Cinderella city.
+                  | Flanked by the spectacular Cascade Mountains to the east and the
+                  | Olympic Mountains to the west, it is one of the beautiful
+                  | cities of the Pacific Northwest and its largest.
+                  | Visit Seattle for its sprawling parks and access to stunning forests.
+          #toronto.location
+            .locationHeader
+              .locationImage
+                a(href='toronto')
+                  img(src='/images/mainpage/cntower.jpg')
+              .locationTitle
+                h2 Toronto
+                p
+                  | Toronto, the most multiculturally diverse city on the planet:
+                  | over 140 languages are spoken. The flavors, aromas, sights and sounds of
+                  | almost every nation converge peacefully in the streets of Toronto's many
+                  | neighborhoods: microcosms of culture thriving in a somewhat hazy 'bigger picture'
+                  | that proud locals defend regardless.
+          #newyork.location
+            .locationHeader
+              .locationImage
+                a(href='newyork')
+                  img(src='/images/mainpage/timessquare.jpg')
+              .locationTitle
+                h2 New York
+                p
+                  | NYC is the mecca of business in the United States,
+                  | and as a melting pot of American culture,
+                  | there is something for every style, taste and budget in New York City.
+                  | With so much to see and do in NYC, it's important for
+                  | NYC tourists to do their research ahead of time before their
+                  | vacation in New York City.
+      #contact
+        p muntravels@mun.ca Copyright 2015.
