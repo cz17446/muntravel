@@ -1,0 +1,237 @@
+body {
+	background-image:url(bg.jpg);
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+	margin-left:100px;
+	margin-right:100px;
+	text-align:center;
+}
+h1 {
+	font-size:50px;
+}
+h2 {
+	font-size: 30px;
+}
+
+#content {
+    width: 1000px;
+}
+
+img {
+	border:thick;
+	border-color:#000;
+}
+
+#heading, .navbar, #availableDates, #tripSummary, #mainpage, #program, #images, #servicesIncluded, #servicesExcluded, #services, #reviews, #reviewsBlock, #deletedReviewsBlock, #newReviewBlock {
+	background-color:#A3C4FA;
+	border-color:#00000;
+	border-radius: 10px;
+	border-style:solid;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	box-shadow:5px 5px #666666;
+}
+
+#mainpage {
+	border-width:thick;
+	overflow:hidden;
+}
+
+#availableDates, #tripSummary, #program, #servicesIncluded, #servicesExcluded, #reviewsBlock, #deletedReviewsBlock, #newReviewBlock {
+	background-color:#ABFCE1;
+}
+
+#heading {
+	border-width:thick;
+	overflow:hidden;
+	background:url(Soft-Blue-and-Pink-Background.jpg);
+}
+
+/****** availableDates ********/
+#availableDates {
+	border-width:medium;
+	text-align: left;
+	width:25%;
+	height:400px;
+	float:left;
+}
+
+/****** Summary ********/
+#tripSummary {
+	border-width:medium;
+	width:71%;
+	float:right;
+	height:400px;
+}
+
+#program {
+	border-width:medium;
+	float:left;
+	width:98.4%;
+}
+
+#images {
+	float:right;
+}
+
+/****** services ********/
+#services {
+	border-width:thick;
+	overflow:hidden;
+}
+
+#servicesIncluded {
+	border-width:medium;
+	float:left;
+	width:48%;
+}
+
+#servicesExcluded {
+    border-width:medium;
+	float:right;
+	width:48%;
+}
+
+/****** reviews ********/
+#reviews {
+    border-width:thick;
+}
+
+#newReviewBlock {
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+#reviewsBlock {
+    border-width:medium;
+    padding: 20px;
+    text-align: left;
+}
+
+#deletedReviewsBlock {
+    border-width:medium;
+    padding: 20px;
+    text-align: left;
+}
+
+.googleMap {
+    width: 250px;
+    height: 250px;
+}
+
+.review {
+    text-align: left;
+}
+
+.replyComment {
+    border-width:medium;
+    background-color:#FB8CBE;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+
+.reviewComment {
+    border-width:medium;
+    background-color:#F9519C;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+
+
+/****** navbar ********/
+
+.navbar {
+	border-width:thick;
+	overflow:hidden;
+	border-width:thick;
+	overflow:hidden;
+	background-color:#9CD2FA;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color:#075F8D;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1em;
+}
+
+nav a:hover, nav a:focus {
+    outline: none;
+}
+
+.effect a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.effect a::before,
+.effect a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #075F8D;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.effect a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.effect a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.effect a:hover::before,
+.effect a:hover::after,
+.effect a:focus::before,
+.effect a:focus::after {
+    opacity: 1;
+}
+
+.effect a:hover::before,
+.effect a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.effect a:hover::after,
+.effect a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}

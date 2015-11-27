@@ -1,0 +1,187 @@
+body {
+	background-image:url(bg.jpg);
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+	margin-left:100px;
+	margin-right:100px;
+	text-align:center;
+}
+h1 {
+	font-size:50px;
+}
+h2 {
+	font-size: 30px;
+}
+
+table {
+	margin-top:auto;
+	margin-bottom:auto;
+	text-align:center;
+}
+
+#heading, .location, #mainpage, #contact, .offers, .maininfo, .navbar {
+	background-color:#A3C4FA;
+	border-color:#00000;
+	border-radius: 10px;
+	border-style:solid;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	box-shadow:5px 5px #666666;
+}
+
+.info {
+	margin-right:10px;
+	margin-top:65px;
+}
+
+.location, #contact, .offers, .maininfo, .navbar {
+	background-color:#ABFCE1;
+}
+
+#heading{
+	border-width:thick;
+	overflow:hidden;
+	background:url(Soft-Blue-and-Pink-Background.jpg);
+}
+
+.maininfo{
+	border-width:thick;
+	overflow:hidden;
+	background-color:#ABFCE1;
+}
+
+.navbar {
+	border-width:thick;
+	overflow:hidden;
+	background-color:#9CD2FA;
+}
+
+.location {
+	border-width:medium;
+	min-height: 100px;
+	overflow: hidden;
+	box-shadow:3px 3px #666666;
+}
+
+#mainpage {
+	border-color:#000;
+	border-width:thick;
+	overflow:hidden;	
+}
+
+.itinerary {
+	float:left;
+	width:64.5%;
+}
+
+.offers {
+	border-width:medium;
+	float:right;
+	overflow:visible;
+	width:34.5%;
+	margin-left:0px;
+	box-shadow:3px 3px #666666;
+}
+
+#contact {
+	border-width:thick;
+	min-height: 100px;
+	overflow: hidden;
+}
+
+.picture {
+	float:left;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	text-align:center;
+	border-radius:10px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color:#075F8D;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1em;
+}
+
+nav a:hover, nav a:focus {
+    outline: none;
+}
+
+.effect a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.effect a::before,
+.effect a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #075F8D;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.effect a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.effect a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.effect a:hover::before,
+.effect a:hover::after,
+.effect a:focus::before,
+.effect a:focus::after {
+    opacity: 1;
+}
+
+.effect a:hover::before,
+.effect a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.effect a:hover::after,
+.effect a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
+</style>
