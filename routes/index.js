@@ -21,17 +21,13 @@ router.get('/toronto', function(req, res) {
     res.render('toronto', { title: 'New York' });
 });
 
-/* GET Userlist page. */
-router.get('/userlist', function(req, res) {
-    var db = req.db;
-    var collection = db.get('usercollection');
-    collection.find({},{},function(e,docs){
-        res.render('userlist', {
-            "userlist" : docs
-        });
-    });
-});
-
+var latitude;
+var longitude;
+router.post('/geolocation', function(req, res) {
+    latitude = req.body.latitude;
+    longitude = req.body.longitude;
+    console.log("location received by node: " + latitude + longitude);
+})
 
 /* POST to Add Review Service */
 router.post('/addreview', function(req, res) {
@@ -40,28 +36,30 @@ router.post('/addreview', function(req, res) {
     var db = req.db;
 
     // Get our form values. These rely on the "name" attributes
-    var usernameInput = req.body.usernameInput;
-    var commentInput = req.body.commentInput;
-
-    console.log("username: " + usernameInput);
+    var username = req.body.username;
+    var usertype = req.body.usertype;
+    var reviewcomment= req.body.reviewcomment;
 
     // Set our collection
     var collection = db.get('userreview');
 
     // Submit to the DB
     collection.insert({
-        "usernameInput" : usernameInput,
-        "commentInput" : commentInput
+        "username" : username,
+        "usertype": usertype,
+        "reviewcomment" : reviewcomment,
+        "replyusername": null,
+        "replyuserrole": null,
+        "replycomment": null,
+        "latitude": latitude,
+        "longitude": longitude
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
             res.send("There was a problem adding the information to the database.");
         }
         else {
-            // And forward to success page
-            res.render('lasvegas', {
-                title : 'Las Vegas'
-            });
+            res.redirect("lasvegas");
         }
     });
 });

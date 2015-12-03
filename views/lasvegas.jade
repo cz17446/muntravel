@@ -3,11 +3,9 @@ html
   head
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary.css', media='screen and (min-device-width: 641px)')
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary-mobile.css', media='screen and (max-device-width: 640px)')
-    //script(src='https://maps.google.com/maps/api/js?sensor=true')
-    //script(src='/javascripts/location_map.js')
-    //script(src='/javascripts/reviewslist_store.js')
-    //script(src='/javascripts/reviews_common.js')
-    script(src='/javascripts/reviews_lasvegas.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maps.google.com/maps/api/js?sensor=true')
+    script(src='/javascripts/geolocation.js')
     meta(charset='utf-8')
     title Las Vegas
   body
@@ -93,22 +91,27 @@ html
           - each review in reviewlist
             div.reviewComment
                 span.label Username: 
-                span.username= review.usernameInput
+                span.username= review.username
+                br
+                span.label User Type: 
+                span.usertype= review.usertype
                 br
                 span.label Comment: 
-                span.comment= review.commentInput
+                span.comment= review.reviewcomment
+                br
+                img.googleMap(src = "https://maps.googleapis.com/maps/api/staticmap?center=" + review.latitude + "," + review.longitude + "&zoom=13&size=300x300&sensor=false")
         h2 Archived Reviews
         #deletedReviewsBlock
         #newReviewBlock
           form(name='addreview', method='post', action='/addreview')
             fieldset
               legend Please Leave Your Comment:
-              select#userRoleInput
+              select#userRoleInput(name='usertype')
                 option(value='traveler') Traveler
                 option(value='hotelManager') Hotel Manager
-              input#usernameInput(type='text', placeholder='Your Name', name="usernameInput")
+              input#usernameInput(type='text', placeholder='Your Name', name="username")
               br
-              textarea#commentInput(rows='4', cols='50', placeholder='Comment', name="commentInput")
+              textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
               br
               button#addButton(type="submit") submit
 
