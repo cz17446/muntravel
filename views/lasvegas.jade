@@ -86,7 +86,6 @@ html
               li Tips
               li Drinks
       #reviews
-        h2 User Reviews
         #newReviewBlock
           form(name='addreview', method='post', action='/addreview')
             fieldset
@@ -99,6 +98,7 @@ html
               textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
               br
               button#addButton(type="submit") Submit
+        h2 User Reviews
         #reviewsBlock
           - each review in reviewlist
             div.reviewComment

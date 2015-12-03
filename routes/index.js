@@ -109,7 +109,6 @@ router.post('/deletereview', function(req, res) {
     var db = req.db;
     var collection = db.get('userreview');
     var reviewid = req.body.reviewid;
-    
     // Submit to the DB
     collection.update({_id : reviewid}, 
         {$set: {

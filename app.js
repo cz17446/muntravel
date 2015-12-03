@@ -8,10 +8,9 @@ var bodyParser = require('body-parser');
 //MongoDB
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
+var db = monk('muntravel:muntravel123@ds061984.mongolab.com:61984/muntravelreviews');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var lasvegas = require('./routes/lasvegas');
 
 var app = express();

@@ -3,11 +3,9 @@ html
   head
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary.css', media='screen and (min-device-width: 641px)')
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary-mobile.css', media='screen and (max-device-width: 640px)')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='https://maps.google.com/maps/api/js?sensor=true')
-    script(src='script/location_map.js')
-    script(src='script/reviewslist_store.js')
-    script(src='script/reviews_common.js')
-    script(src='script/reviews_seattle.js')
+    script(src='/javascripts/geolocation.js')
     meta(charset='utf-8')
     title Seattle
   body
