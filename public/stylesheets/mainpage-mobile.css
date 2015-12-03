@@ -1,106 +1,123 @@
 
 h1 {
-    text-align: left;
-    color: black;
+    font-size: 150%;
 }
 
 h2 {
-    text-align: left;
-    color: black;
-}
-
-img {
-    width: 200px;
-}
-
-#content {
-    width: 320px;
-    margin: 10px;
-}
-
-/*********** title *************/
-#heading {
-    width: 400px;
-    display: table;
-
-    border: thick groove black;
-    width: 400px;
-}
-
-#logoImage {
-    width: 100px;
-}
-
-#headingRow {
-    display: table-row;
-}
-
-#logo {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#title {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: left;
-}
-
-#address {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-}
-
-#addressContent {
-    margin: 10px;
-}
-
-/*********** itinerary list *************/
-#mainpage {
-    display: table;
-
-    width: 320px;
-    border: thin groove black;
     text-align: center;
 }
 
-.location {
-    border: thin solid black;
-    background-color: darkgrey;
+.locationImage img {
+    width:auto;
+    width: 200px;
+}
 
-    width: 320px;
-    padding: 20px;
-    margin: 20px;
-    border-spacing: 15px;
+.tittle_img {
+    width: 200px;
+    margin: :auto;
+}
+
+
+#content {
+    border-radius: 30px;
+    background-color:  #840a2d;
+    width:440px;
+    padding-top: 10px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+/*********** title *************/
+#masterStorageClear{
+    display:none;
+}
+#heading {
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+    text-align: center;
+}
+
+#logoImage {
+    width:90px;
+    height:50px;
+}
+
+#headingRow {
+    margin-left: 15px;
+}
+
+#logo{
+    display:inline-block;
+}
+
+#title {
+    display:inline-block;
+}
+
+#address {
+    display:inline-block;
+}
+
+#addressContent {
+    font-size:70%;
+}
+
+/*********** itinerary list *************/
+#mainpage{
+    margin-top:15px;
+}
+#itinerary {
+    padding-top: 10px;
+    width:400px;
+    margin: auto;
+    background-color: white;
+    border-radius: 30px;
+}
+.location:first-child{
+    border-radius:30px 30px 0px 0px;
+}
+.location:last-child{
+    border-radius: 0px 0px 30px 30px;
+}
+.location:nth-child(even) {
+    background-color: #f5efef ;
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+}
+.location:nth-child(odd){
+    background-color: white ;
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+}
+
+.location {
+    text-align: center; 
 }
 
 /*********** weekly offers *************/
 #offers {
-    border: thin groove black;
-    border-radius:2em;
-    width: 340px;
-
-    padding: 10px;
-    margin: 10px;
-    text-align: left;
+    border-radius: 30px;
+    background-color: white;
+    width:370px;
+    padding-left: 20px;
+    padding-right:10px;
+    padding-bottom:5px;
+    margin-left:auto;
+    margin-right:auto;
+    word-spacing:1px;
 }
 
 /*********** footer *************/
 #contact {
-    border: thin groove black;
-    width: 362px;
-
-    padding: 20px;
-    margin: 20px, 20px, 20px, 10px;
+    margin: auto ;
+    width:400px;
     text-align: center;
 }
 
 body {
-    background-color: #f2a21e;
-    font-family: Georgia;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    padding-top: 10px;
+    background-color: #f5efef ;
+    font-size: 90%;
 }

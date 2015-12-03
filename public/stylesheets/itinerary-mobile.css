@@ -1,121 +1,138 @@
 h1 {
-    text-align: left;
-    color: black;
+    text-align: center;
+}
+
+.title_img{
+    height: 100px;
+    width: 150px;
+}
+
+ul{
+    font-size: 120%;
 }
 
 h2{
-    text-align: left;
-    color: black;
+    text-align: center;
 }
 
 #content {
-    width: 320px;
-    margin: 10px;
+    border-radius: 30px;
+    background-color:  #840a2d;
+    width:440px;
+    padding-top: 10px;
+    margin-left: auto ;
+    margin-right: auto ;
+    padding-bottom: 20px;
+    text-align: left;
 }
+
 
 /****** title ********/
 #tripTitle {
-    display: table;
-    border-spacing: 10px;
 
-    border: thick groove black;
-    width: 400px;
-    padding: 10px, 20px, 10px, 20px;
-    margin: 10px, 10px;
 }
 
 #titleRow {
-    display: table-row;
+
 }
 
 #titleName {
-    display: table-cell;
-    vertical-align: middle;
-    width: 240px;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
 }
 
-#titleImageContainer {
-    display: table-cell;
-    vertical-align: middle;
+.titleImgContainer {
+    padding-top: 5px;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #f5efef;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 /****** availableDates ********/
 #availableDates {
-    border: thin groove black;
-    border-radius:2em;
-    width: 380px;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+    padding-bottom: 10px;
 
-    padding: 10px;
-    margin-top: 10px;
-    text-align: left;
 }
 
 /****** Summary ********/
 #tripDetails {
-    width: 400px;
+
 }
 
 #tripSummary {
-    border: thin solid black;
-    background-color: darkgrey;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #f5efef;
+    text-align: center;
 }
 
 #program {
-    border: thin solid black;
-    background-color: darkgrey;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+
 }
 
 /****** services ********/
 #services {
-    display: table;
+    border-radius: 30px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #f5efef;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
-    border-spacing: 5px;
-    width: 400px;
-    text-align: left;
-    clear: both;
 }
 
 #servicesRow {
-    display: table-row;
+
 }
 
 #servicesIncluded {
-    display: table-cell;
-    padding: 10px;
-    border: thin solid black;
-    background-color: darkgrey;
+
 }
 
 #servicesExcluded {
-    display: table-cell;
-    padding: 10px;
-    border: thin solid black;
-    background-color: darkgrey;
+
 }
 
 /****** reviews ********/
 #reviews {
-    border: thin solid black;
-    background-color: darkgrey;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 380px;
-
+    border-radius: 30px;
+    width:400px;
+    padding-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
     text-align: center;
 }
 
+#newReviewBlock{
+    width:240px;
+}
+
+#commentInput{
+
+}
+
 body {
-    background-color: #f2a21e;
-    font-family: Georgia;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    padding-top: 10px;
+    background-color: #f5efef ;
+    font-size: 92%;
 }
