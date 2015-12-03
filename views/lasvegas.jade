@@ -3,10 +3,10 @@ html
   head
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary.css', media='screen and (min-device-width: 641px)')
     link(rel='stylesheet', type='text/css', href='/stylesheets/itinerary-mobile.css', media='screen and (max-device-width: 640px)')
-    script(src='https://maps.google.com/maps/api/js?sensor=true')
-    script(src='/javascripts/location_map.js')
-    script(src='/javascripts/reviewslist_store.js')
-    script(src='/javascripts/reviews_common.js')
+    //script(src='https://maps.google.com/maps/api/js?sensor=true')
+    //script(src='/javascripts/location_map.js')
+    //script(src='/javascripts/reviewslist_store.js')
+    //script(src='/javascripts/reviews_common.js')
     script(src='/javascripts/reviews_lasvegas.js')
     meta(charset='utf-8')
     title Las Vegas
@@ -88,21 +88,27 @@ html
               li Tips
               li Drinks
       #reviews
-        form
-          h2 User Reviews
-          #reviewsBlock
-          h2 Archived Reviews
-          #deletedReviewsBlock
-          #newReviewBlock
-            // New Comment Block
+        h2 User Reviews
+        #reviewsBlock
+          - each review in reviewlist
+            div.reviewComment
+                span.label Username: 
+                span.username= review.usernameInput
+                br
+                span.label Comment: 
+                span.comment= review.commentInput
+        h2 Archived Reviews
+        #deletedReviewsBlock
+        #newReviewBlock
+          form(name='addreview', method='post', action='/addreview')
             fieldset
               legend Please Leave Your Comment:
               select#userRoleInput
                 option(value='traveler') Traveler
                 option(value='hotelManager') Hotel Manager
-              input#userNameInput(type='text', value='Your Name')
+              input#usernameInput(type='text', placeholder='Your Name', name="usernameInput")
               br
-              textarea#commentInput(rows='4', cols='50', placeholder='Comment')
+              textarea#commentInput(rows='4', cols='50', placeholder='Comment', name="commentInput")
               br
-              input#addButton(type='button', value='Add')
-              input#clearStorageButton(type='button', value='Clean Storage')
+              button#addButton(type="submit") submit
+

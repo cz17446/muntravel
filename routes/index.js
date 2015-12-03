@@ -6,11 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET Hello World page. */
-router.get('/helloworld', function(req, res) {
-    res.render('helloworld', { title: 'Hello, World!' });
-});
-
 /* GET newyork page. */
 router.get('/newyork', function(req, res) {
     res.render('newyork', { title: 'New York' });
@@ -26,11 +21,6 @@ router.get('/toronto', function(req, res) {
     res.render('toronto', { title: 'New York' });
 });
 
-/* GET lasvegas page. */
-router.get('/lasvegas', function(req, res) {
-    res.render('lasvegas', { title: 'New York' });
-});
-
 /* GET Userlist page. */
 router.get('/userlist', function(req, res) {
     var db = req.db;
@@ -42,9 +32,37 @@ router.get('/userlist', function(req, res) {
     });
 });
 
-/* GET New User page. */
-router.get('/newuser', function(req, res) {
-    res.render('newuser', { title: 'Add New User' });
-});
 
+/* POST to Add Review Service */
+router.post('/addreview', function(req, res) {
+    console.log("Start to save to MongoDB");
+    // Set our internal DB variable
+    var db = req.db;
+
+    // Get our form values. These rely on the "name" attributes
+    var usernameInput = req.body.usernameInput;
+    var commentInput = req.body.commentInput;
+
+    console.log("username: " + usernameInput);
+
+    // Set our collection
+    var collection = db.get('userreview');
+
+    // Submit to the DB
+    collection.insert({
+        "usernameInput" : usernameInput,
+        "commentInput" : commentInput
+    }, function (err, doc) {
+        if (err) {
+            // If it failed, return error
+            res.send("There was a problem adding the information to the database.");
+        }
+        else {
+            // And forward to success page
+            res.render('lasvegas', {
+                title : 'Las Vegas'
+            });
+        }
+    });
+});
 module.exports = router;
