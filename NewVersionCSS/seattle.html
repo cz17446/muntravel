@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="itinerary.css" media="screen and (min-device-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="css/itinerary-mobile.css" media="screen and (max-device-width: 640px)">
+	<link rel="icon" type="image/png" href="iconBig.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="iconSmall.png" sizes="16x16" />
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="script/location_map.js"></script>
+    <script src="script/reviewslist_store.js"></script>
+    <script src="script/reviews_common.js"></script>
+    <script src="script/reviews_seattle.js"></script>
+    <meta charset="utf-8">
+    <title>Seattle</title>
+</head>
+<body>
+
+<div id="heading" align="center"> <br />
+	<h1>Seattle 3 Days Trip</h1>
+        <img src="seattle1.jpg" class="title_img" width="192">
+		<img src="seattle2.jpg" class="title_img" width="192">
+		<img src="seattle3.jpg" class="title_img" width="192">
+</div>
+
+<div class="navbar" align="center">
+	<table>
+		<tr>
+			<td><nav class="effect"><a href="home.html">Home</a></nav></td>
+			<td><nav class="effect"><a href="lasvegas.html">Red Rock Canyon</a></nav></td>
+			<td><nav class="effect"><a href="seattle.html">Space Needle</a></nav></td>
+			<td><nav class="effect"><a href="toronto.html">CN Tower</a></nav></td>
+			<td><nav class="effect"><a href="newyork.html">Times Square</a></nav></td>
+			<td><nav class="effect"><a href="contactus.html">Contact Us</a></nav></td>
+		</tr>
+	</table>
+</div>
+
+<div id="mainpage">
+	<div id="availableDates">
+		<h2 align="center">Available Dates</h2>
+            <ul>
+                <li>October 15 - 17, 2015</li>
+                <li>October 19 - 21, 2015</li>
+                <li>November 1 - 3, 2015</li>
+                <li>November 5 - 7, 2015</li>
+                <li>November 9 - 11, 2015</li>
+                <li>November 16 - 18, 2015</li>
+                <li>November 22 - 24, 2015</li>
+            </ul>
+    </div>
+   	<div id="tripSummary">
+           <h2>Trip Summary</h2>
+           <p>Seattle's petite downtown area and many attractions make it possible
+                    to pack a week’s experience into a weekend. Grab a latte and
+                    start at the world-famous Pike Place Market. Watch the fish
+                    fly and then head to the Space Needle for a dramatic view of
+                    the city and its surrounding waters. Return to earth and jump
+                    aboard a moonlit dinner cruise to Blake Island or
+                    canoe through the arbouretum.<br>
+			</p>
+    </div>
+	<div id="program" align="left">
+                <h2 align="center">Program</h2>
+                <ul>
+                    <li><strong>Day 1:</strong></li>
+                    <ul>
+                        <li>Pike Place Market</li>
+                        <li>Sky View Observatory</li>
+                        <li>Space Needle</li>
+                    </ul>
+                    <li><strong>Day 2:</strong></li>
+                    <ul>
+                        <li>Chihuly Garden and Glass</li>
+                        <li>The Museum of Flight</li>
+                        <li>Washington State Ferries</li>
+                    </ul>
+                    <li><strong>Day 3:</strong></li>
+                    <ul>
+                        <li>Microsoft Headquarter</li>
+                        <li>Seattle Symphony</li>
+                        <li>Woodland Park Zoo</li>
+                    </ul>
+                </ul>
+            </div>
+</div>
+<div id="services">
+	<div id="servicesIncluded">
+		<h2>Services Included</h2>
+			<ul>
+				<li>Flight</li>
+				<li>Hotel</li>
+				<li>Breakfast</li>
+			</ul>
+	</div>
+<div id="servicesExcluded">
+	<h2>Services Excluded</h2>
+		<ul>
+			<li>Food</li>
+			<li>Tips</li>
+			<li>Drinks</li>
+		</ul>
+	</div>
+</div>
+
+    <!-- Bottom Section -->
+    
+    <div id="reviews">
+        <form>
+            <h2>User Reviews</h2>
+            <div id="reviewsBlock">
+
+            </div>
+            <h2>Archived Reviews</h2>
+            <div id="deletedReviewsBlock">
+
+            </div>
+            <div id="newReviewBlock">
+                <!-- New Comment Block -->
+                <fieldset>
+                    <legend>Please Leave Your Comment:</legend>
+                    <select id="userRoleInput">
+                        <option value="traveler">Traveler</option>
+                        <option value="hotelManager">Hotel Manager</option>
+                    </select>
+                    <input type="text" id="userNameInput" value="Your Name">
+                    </br>
+                    <textarea rows="4" cols="50" id="commentInput" placeholder="Comment"></textarea>
+                    </br>
+                    <input type="button" id="addButton" value="Add">
+                    <input type="button" id="clearStorageButton" value="Clean Storage">
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
