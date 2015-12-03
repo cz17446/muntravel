@@ -1,15 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-function lasvegas(req, res) {
+function seattle(req, res) {
     var db = req.db;
     var collection = db.get('userreview');
 
-    collection.find({status: "posted", city: "lasvegas"},{ sort : { timestamp : -1 } }, function(err, cursor){
+    collection.find({status: "posted", city: "seattle"},{ sort : { timestamp : -1 } }, function(err, cursor){
         console.log("search posted comments"  + cursor);
-      collection.find({status: "deleted", city: "lasvegas"},{ sort : { timestamp : -1 } },function(err,docs){
+      collection.find({status: "deleted", city: "seattle"},{ sort : { timestamp : -1 } },function(err,docs){
           console.log("search deleted comments " + docs);
-          res.render('lasvegas', {
+          res.render('seattle', {
               "reviewlist" : (cursor === undefined) ? {} : cursor,
               "deletedreviewlist" : (docs === undefined) ? {} : docs
           });
@@ -17,7 +17,7 @@ function lasvegas(req, res) {
     });
 }
 
-/* GET lasvegas page. */
-router.get('/', lasvegas);
+/* GET seattle page. */
+router.get('/', seattle);
 
 module.exports = router;

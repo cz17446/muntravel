@@ -80,21 +80,71 @@ html
               li Tips
               li Drinks
       #reviews
-        form
-          h2 User Reviews
-          #reviewsBlock
-          h2 Archived Reviews
-          #deletedReviewsBlock
-          #newReviewBlock
-            // New Comment Block
+        #newReviewBlock
+          form(name='addreview', method='post', action='/addreview')
             fieldset
               legend Please Leave Your Comment:
-              select#userRoleInput
+              select#userRoleInput(name='usertype')
                 option(value='traveler') Traveler
                 option(value='hotelManager') Hotel Manager
-              input#userNameInput(type='text', value='Your Name')
+              input#usernameInput(type='text', placeholder='Your Name', name="username")
+              input(name="city", type="hidden", value="toronto") 
               br
-              textarea#commentInput(rows='4', cols='50', placeholder='Comment')
+              textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
               br
-              input#addButton(type='button', value='Add')
-              input#clearStorageButton(type='button', value='Clean Storage')
+              button#addButton(type="submit") Submit
+        h2 User Reviews
+        #reviewsBlock
+          - each review in reviewlist
+            div.reviewComment
+                span.label Username: 
+                span.username= review.username
+                br
+                span.label User Type: 
+                span.usertype= review.usertype
+                br
+                span.label Comment: 
+                span.comment= review.reviewcomment
+                br
+                img.googleMap(src = "https://maps.googleapis.com/maps/api/staticmap?center=" + review.latitude + "," + review.longitude + "&zoom=13&size=300x300&sensor=false")
+                div.replyComment
+                    span.label Username: 
+                    span.username= review.replyusername
+                    br
+                    span.label User Type: 
+                    span.usertype= review.replyusertype
+                    br
+                    span.label Comment: 
+                    span.comment= review.replycomment
+                fieldset
+                    legend Please Leave Your Comment:
+                    form(name='updatereview', method='post', action='/updatereview')
+                        select#userRoleInput(name='usertype')
+                            option(value='traveler') Traveler
+                            option(value='hotelManager') Hotel Manager
+                        input#usernameInput(type='text', placeholder='Your Name', name="username")
+                        br
+                        textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
+                        br
+                        input(name="reviewid", type="hidden", value=review._id.toHexString()) 
+                        input(name="city", type="hidden", value="toronto") 
+                        button#replyButton(type="submit", value="reply") Reply
+                    form(name='deletereview', method='post', action='/deletereview')
+                        input(name="reviewid", type="hidden", value=review._id.toHexString()) 
+                        input(name="city", type="hidden", value="toronto") 
+                        button#deleteButton(type="submit", value="delete") Delete
+        h2 Archived Reviews
+        #deletedReviewsBlock
+            - each review in deletedreviewlist
+                div.reviewComment
+                    span.label Username: 
+                    span.username= review.username
+                    br
+                    span.label User Type: 
+                    span.usertype= review.usertype
+                    br
+                    span.label Comment: 
+                    span.comment= review.reviewcomment
+                    br
+                    img.googleMap(src = "https://maps.googleapis.com/maps/api/staticmap?center=" + review.latitude + "," + review.longitude + "&zoom=13&size=300x300&sensor=false")
+

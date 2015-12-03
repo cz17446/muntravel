@@ -6,20 +6,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET newyork page. */
-router.get('/newyork', function(req, res) {
-    res.render('newyork', { title: 'New York' });
-});
-
-/* GET seattle page. */
-router.get('/seattle', function(req, res) {
-    res.render('seattle', { title: 'New York' });
-});
-
-/* GET toronto page. */
-router.get('/toronto', function(req, res) {
-    res.render('toronto', { title: 'New York' });
-});
+///* GET newyork page. */
+//router.get('/newyork', function(req, res) {
+//    res.render('newyork', { title: 'New York' });
+//});
+//
+///* GET seattle page. */
+//router.get('/seattle', function(req, res) {
+//    res.render('seattle', { title: 'New York' });
+//});
+//
+///* GET toronto page. */
+//router.get('/toronto', function(req, res) {
+//    res.render('toronto', { title: 'New York' });
+//});
 
 var latitude;
 var longitude;
@@ -40,12 +40,13 @@ router.post('/addreview', function(req, res) {
     var username = req.body.username;
     var usertype = req.body.usertype;
     var reviewcomment= req.body.reviewcomment;
+    var city=req.body.city;
 
     // Set our collection
     var collection = db.get('userreview');
 
     // Submit to the DB
-    //TODO: city, and googlemap string
+    //TODO: googlemap string
     collection.insert({
         "timestamp" : new Date(),
         "status" : "posted",
@@ -56,14 +57,15 @@ router.post('/addreview', function(req, res) {
         "replyusertype": null,
         "replycomment": null,
         "latitude": latitude,
-        "longitude": longitude
+        "longitude": longitude,
+        "city": city
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
             res.send("There was a problem adding the information to the database.");
         }
         else {
-            res.redirect("lasvegas");
+            res.redirect(city);
         }
     });
 });
@@ -79,6 +81,7 @@ router.post('/updatereview', function(req, res) {
     var username = req.body.username;
     var usertype = req.body.usertype;
     var reviewcomment= req.body.reviewcomment;
+    var city=req.body.city;
 
     console.log("reviewid " + reviewid)
 
@@ -99,7 +102,7 @@ router.post('/updatereview', function(req, res) {
                 res.send("There was a problem adding the information to the database.");
             }
             else {
-                res.redirect("lasvegas");
+                res.redirect(city);
             }
     });
 });
@@ -109,6 +112,7 @@ router.post('/deletereview', function(req, res) {
     var db = req.db;
     var collection = db.get('userreview');
     var reviewid = req.body.reviewid;
+    var city=req.body.city;
     // Submit to the DB
     collection.update({_id : reviewid}, 
         {$set: {
@@ -121,7 +125,7 @@ router.post('/deletereview', function(req, res) {
                 res.send("There was a problem adding the information to the database.");
             }
             else {
-                res.redirect("lasvegas");
+                res.redirect(city);
             }
     });
 });

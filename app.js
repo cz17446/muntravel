@@ -12,6 +12,9 @@ var db = monk('muntravel:muntravel123@ds061984.mongolab.com:61984/muntravelrevie
 
 var routes = require('./routes/index');
 var lasvegas = require('./routes/lasvegas');
+var newyork = require('./routes/newyork');
+var toronto = require('./routes/toronto');
+var seattle = require('./routes/seattle');
 
 var app = express();
 
@@ -35,7 +38,10 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/lasvegas', lasvegas)
+app.use('/lasvegas', lasvegas);
+app.use('/newyork', newyork);
+app.use('/toronto', toronto);
+app.use('/seattle', seattle);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

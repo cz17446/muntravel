@@ -94,6 +94,7 @@ html
                 option(value='traveler') Traveler
                 option(value='hotelManager') Hotel Manager
               input#usernameInput(type='text', placeholder='Your Name', name="username")
+              input(name="city", type="hidden", value="lasvegas") 
               br
               textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
               br
@@ -132,9 +133,11 @@ html
                         textarea#commentInput(rows='4', cols='50', placeholder='Your Comment', name="reviewcomment")
                         br
                         input(name="reviewid", type="hidden", value=review._id.toHexString()) 
+                        input(name="city", type="hidden", value="lasvegas") 
                         button#replyButton(type="submit", value="reply") Reply
                     form(name='deletereview', method='post', action='/deletereview')
                         input(name="reviewid", type="hidden", value=review._id.toHexString()) 
+                        input(name="city", type="hidden", value="lasvegas") 
                         button#deleteButton(type="submit", value="delete") Delete
         h2 Archived Reviews
         #deletedReviewsBlock
